@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Enterprises - Solar Energy Solutions</title>
+    <!-- Tailwind CSS for high-quality utility design & custom google fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        solarYellow: '#F39C12',
+                        solarOrange: '#E67E22',
+                        solarGreen: '#27AE60',
+                        solarDark: '#2C3E50',
+                        solarLight: '#F8F9FA'
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        hind: ['Hind', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Hind', 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.85)), url('https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-3xl font-extrabold text-solarDark tracking-tight flex items-center gap-2">
+                        <i class="fa-solid fa-sun text-solarYellow animate-spin-slow"></i>
+                        Ayush<span class="text-solarGreen">Enterprises</span>
+                    </span>
+                </div>
+                <!-- Navigation Menu -->
+                <nav class="hidden md:flex space-x-8 text-lg font-medium text-slate-700">
+                    <a href="#home" class="hover:text-solarGreen transition duration-200">Home</a>
+                    <a href="#why-choose-us" class="hover:text-solarGreen transition duration-200">Why Us?</a>
+                    <a href="#services" class="hover:text-solarGreen transition duration-200">Services</a>
+                    <a href="#how-it-works" class="hover:text-solarGreen transition duration-200">Process</a>
+                    <a href="#calculator" class="hover:text-solarGreen transition duration-200 text-solarOrange">Calculator</a>
+                </nav>
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contact" class="bg-solarGreen hover:bg-emerald-600 text-white font-semibold py-3 px-6 rounded-full shadow-lg transition duration-300 transform hover:-translate-y-1">
+                        <i class="fa-solid fa-file-invoice-dollar mr-2"></i>Get Free Quote
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-800 hover:text-solarGreen focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-inner px-4 pt-4 pb-6 space-y-3">
+            <a href="#home" class="block py-2 text-slate-700 hover:text-solarGreen font-medium">Home</a>
+            <a href="#why-choose-us" class="block py-2 text-slate-700 hover:text-solarGreen font-medium">Why Us?</a>
+            <a href="#services" class="block py-2 text-slate-700 hover:text-solarGreen font-medium">Services</a>
+            <a href="#how-it-works" class="block py-2 text-slate-700 hover:text-solarGreen font-medium">Process</a>
+            <a href="#calculator" class="block py-2 text-solarOrange hover:text-solarGreen font-medium">Solar Calculator</a>
+            <a href="#contact" class="block text-center bg-solarGreen hover:bg-emerald-600 text-white font-semibold py-3 rounded-full mt-4">
+                Get Free Quote
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-[85vh] flex items-center text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-8 space-y-6">
+                    <span class="inline-block bg-solarOrange text-white text-xs sm:text-sm font-bold tracking-widest uppercase px-4 py-1.5 rounded-full shadow-md">
+                        ⚡ ISO Certified Solar Installation Company
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
+                        Bijli Ka Bill <span class="text-solarYellow underline decoration-wavy decoration-3">Zero Karein</span>,<br>
+                        Solar Apnayein!
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-200 max-w-2xl font-light">
+                        Ayush Enterprises ke sath paayein affordable, reliable aur lifetime chalne wale solar solutions. Ghar ho ya business, har jagah layein suraj ki roshni se bani sasti bijli.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#contact" class="bg-solarGreen hover:bg-emerald-600 text-white font-bold text-center py-4 px-8 rounded-full shadow-xl transition duration-300 transform hover:-translate-y-1">
+                            <i class="fa-solid fa-calendar-check mr-2"></i>Free Consultation Book Karein
+                        </a>
+                        <a href="#services" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 text-center font-bold py-4 px-8 rounded-full backdrop-blur-sm transition duration-300">
+                            Hamare Projects Dekhein
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative solar beam shape -->
+        <div class="absolute bottom-0 right-0 left-0 h-16 bg-gradient-to-t from-slate-50 to-transparent"></div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose-us" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-solarGreen font-bold tracking-widest uppercase text-sm">Hamar Saakh</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-solarDark mt-2">Ayush Enterprises Hi Kyun?</h2>
+                <div class="w-20 h-1 bg-solarYellow mx-auto mt-4 rounded"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Left: Why Choose Us Cards -->
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-emerald-100 text-solarGreen rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-solarDark mb-2">Premium Quality</h3>
+                        <p class="text-slate-600 text-sm">Government approved aur top-brand solar panels aur inverters jo barson-baras chalte hain.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-amber-100 text-solarYellow rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-tools"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-solarDark mb-2">Expert Installation</h3>
+                        <p class="text-slate-600 text-sm">Hamare trained professionals dwara safe, secure aur neat quality fitting ensure ki jati hai.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-solarDark mb-2">Subsidy Support</h3>
+                        <p class="text-slate-600 text-sm">Government solar subsidy claims ke liye poori paper-work support aur approval guide.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition duration-300">
+                        <div class="w-12 h-12 bg-orange-100 text-solarOrange rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-solarDark mb-2">25 Years Warranty</h3>
+                        <p class="text-slate-600 text-sm">Long-term maintenance support aur solid guarantees jo aapki investment ko secure karein.</p>
+                    </div>
+                </div>
+                
+                <!-- Right: High Quality Trust Image -->
+                <div class="lg:col-span-5">
+                    <div class="relative">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-solarYellow to-solarGreen rounded-3xl blur opacity-30"></div>
+                        <div class="relative bg-white rounded-3xl overflow-hidden shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1620038650424-85e651757715?auto=format&fit=crop&w=600&q=80" alt="Professional solar installer smiling" class="w-full object-cover aspect-[4/3] lg:aspect-square">
+                            <div class="p-6 bg-solarDark text-white flex items-center gap-4">
+                                <i class="fa-solid fa-certificate text-3xl text-solarYellow"></i>
+                                <div>
+                                    <h4 class="font-bold text-lg">Hassle-Free Booking</h4>
+                                    <p class="text-xs text-slate-300">Aapki convenience hamari sabse badi priority hai.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-solarGreen font-bold tracking-widest uppercase text-sm">Hamara Kaam</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-solarDark mt-2">Hamare Solar Solutions</h2>
+                <div class="w-20 h-1 bg-solarYellow mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Residential Solar -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col h-full border border-slate-100">
+                    <div class="relative h-56">
+                        <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=500&q=80" alt="Residential Solar Installation" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-solarGreen text-white text-xs font-bold px-3 py-1 rounded-full shadow">Popular</div>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-solarDark mb-3">Residential Solar</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Apne ghar ki chat par solar lagwayein aur bijli ke bhaari bill se hamesha ke liye azaadi paayein.</p>
+                        </div>
+                        <a href="#contact" class="text-solarGreen hover:text-emerald-700 font-bold inline-flex items-center gap-2 group">
+                            Inquiry Karein <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Commercial Solar -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col h-full border border-slate-100">
+                    <div class="relative h-56">
+                        <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=500&q=80" alt="Commercial Solar Installation" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-solarDark mb-3">Commercial Solar</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Offices, schools, aur factories ke liye bade solar plants jo business ki running cost ko kam karein.</p>
+                        </div>
+                        <a href="#contact" class="text-solarGreen hover:text-emerald-700 font-bold inline-flex items-center gap-2 group">
+                            Inquiry Karein <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Solar Water Pumps -->
+                <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col h-full border border-slate-100">
+                    <div class="relative h-56">
+                        <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=500&q=80" alt="Solar Water Pump on field" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-solarDark mb-3">Solar Water Pumps</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed mb-6">Kisano ke liye dhoop se chalne wale solar pumps jo kheti ko banayein aasan aur sasti.</p>
+                        </div>
+                        <a href="#contact" class="text-solarGreen hover:text-emerald-700 font-bold inline-flex items-center gap-2 group">
+                            Inquiry Karein <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works & Interactive Solar Estimator -->
+    <section id="how-it-works" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-solarGreen font-bold tracking-widest uppercase text-sm">Pragyan</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-solarDark mt-2">Solar Lagwana Ab Hai Aasan!</h2>
+                <div class="w-20 h-1 bg-solarYellow mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
+                    <span class="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-solarYellow text-white text-lg font-bold flex items-center justify-center rounded-full shadow">1</span>
+                    <div class="text-4xl text-solarGreen mb-4 mt-2">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-solarDark mb-2">Free Site Survey</h3>
+                    <p class="text-slate-600 text-sm">Hamari team aapke ghar ya site par aakar space, shading aur electrical load analyze karegi.</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
+                    <span class="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-solarYellow text-white text-lg font-bold flex items-center justify-center rounded-full shadow">2</span>
+                    <div class="text-4xl text-solarGreen mb-4 mt-2">
+                        <i class="fa-solid fa-drafting-compass"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-solarDark mb-2">Custom Design</h3>
+                    <p class="text-slate-600 text-sm">Aapke budget aur zaroorat ke hisab se customized high efficiency solar system layout design kiya jayega.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
+                    <span class="absolute -top-5 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-solarYellow text-white text-lg font-bold flex items-center justify-center rounded-full shadow">3</span>
+                    <div class="text-4xl text-solarGreen mb-4 mt-2">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-solarDark mb-2">Quick Installation</h3>
+                    <p class="text-slate-600 text-sm">Sahi engineering compliance ke sath, kuch hi dino me aapka system install ho kar active ho jayega.</p>
+                </div>
+            </div>
+
+            <!-- Solar Calculator / Estimator Panel -->
+            <div id="calculator" class="mt-20 bg-solarDark text-white rounded-3xl p-8 lg:p-12 shadow-xl relative overflow-hidden">
+                <div class="absolute right-0 top-0 opacity-10 text-9xl">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <div class="relative z-10 max-w-4xl mx-auto">
+                    <h3 class="text-2xl lg:text-3xl font-extrabold text-center mb-2">Apni Savings Check Karein</h3>
+                    <p class="text-slate-300 text-center mb-8 text-sm">Niche scroll karke check karein ki solar lagane par kitna kharch aur bachat hogi.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-300 mb-2">Monthly Electricity Bill (Avg in Rupees)</label>
+                                <input type="range" id="billRange" min="1000" max="25000" step="500" value="5000" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-solarYellow">
+                                <div class="flex justify-between text-xs text-slate-400 mt-2">
+                                    <span>₹1,000</span>
+                                    <span class="text-solarYellow font-bold text-base">Current Bill: ₹<span id="billVal">5000</span></span>
+                                    <span>₹25,000</span>
+                                </div>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                                <p class="text-xs text-slate-300"><i class="fa-solid fa-lightbulb text-solarYellow mr-1"></i> Recommended System Capacity: <strong class="text-white text-sm"><span id="recCapacity">3</span> kW</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white/10 p-6 rounded-2xl border border-white/20 backdrop-blur-sm space-y-4">
+                            <div class="flex justify-between items-center pb-2 border-b border-white/10">
+                                <span class="text-sm text-slate-300">Estimated Cost Range:</span>
+                                <span class="font-bold text-white text-lg" id="estCost">₹1,50,000 - ₹1,80,000</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-2 border-b border-white/10">
+                                <span class="text-sm text-slate-300">Expected Monthly Savings:</span>
+                                <span class="font-bold text-solarGreen text-lg" id="estSavings">₹4,200</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-slate-300">Payback Period:</span>
+                                <span class="font-bold text-solarYellow text-lg">3.5 - 4 Years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Social Proof (Metrics) & Real Impact -->
+    <section class="py-20 bg-gradient-to-br from-solarDark to-slate-900 text-white relative overflow-hidden">
+        <!-- SVG background decoration -->
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"/>
+                </pattern>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-solarYellow font-bold tracking-widest uppercase text-sm">Real Impact</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold">Hamari Kahani,<br>Aankdon Ki Zubani</h2>
+                    <p class="text-slate-300">Har parivaar aur business tak affordable solar energy pahuchakar humne na sirf unke bijli ke bill ko kam kiya hai, balki humare paryavaran ko bhi clean banaye rakhne me help kiya hai.</p>
+                    <div class="inline-block bg-white/10 backdrop-blur-sm p-4 rounded-xl border border-white/10">
+                        <p class="text-xs text-slate-300">Carbon emission reduction equal to planting</p>
+                        <p class="text-lg font-bold text-solarGreen"><i class="fa-solid fa-tree mr-1"></i> 25,000+ Trees Planted</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                    <!-- Stat 1 -->
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-solarYellow/30 transition duration-300">
+                        <div class="text-4xl font-extrabold text-solarYellow mb-2" id="stat-homes">500+</div>
+                        <div class="text-sm font-semibold text-slate-200">Happy Homes & Businesses</div>
+                    </div>
+                    <!-- Stat 2 -->
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-solarYellow/30 transition duration-300">
+                        <div class="text-4xl font-extrabold text-solarGreen mb-2" id="stat-energy">1 MW+</div>
+                        <div class="text-sm font-semibold text-slate-200">Clean Energy Generated</div>
+                    </div>
+                    <!-- Stat 3 -->
+                    <div class="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-solarYellow/30 transition duration-300">
+                        <div class="text-4xl font-extrabold text-emerald-400 mb-2" id="stat-savings">₹50L+</div>
+                        <div class="text-sm font-semibold text-slate-200">Savings in Electricity Bills</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultation & Contact Section -->
+    <section id="contact" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-solarGreen font-bold tracking-widest uppercase text-sm">Consultation</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-solarDark mt-2">Free Consultation Book Karein</h2>
+                <div class="w-20 h-1 bg-solarYellow mx-auto mt-4 rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-100">
+                <!-- Info Column (Left) -->
+                <div class="lg:col-span-5 bg-solarDark p-8 lg:p-12 text-white flex flex-col justify-between">
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold">Ayush Enterprises</h3>
+                        <p class="text-slate-300 text-sm">Apni requirements likhkar submit karein, hamari executive expert team agle 24 ghante me aapse contact karegi.</p>
+                        
+                        <div class="space-y-4 pt-6">
+                            <div class="flex items-start gap-4">
+                                <div class="text-solarYellow text-lg mt-1"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase font-semibold">Contact No.</p>
+                                    <p class="text-sm font-bold text-white hover:text-solarYellow transition"><a href="tel:+919999999999">+91 XXXXXXXXXX</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="text-solarYellow text-lg mt-1"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase font-semibold">Email ID</p>
+                                    <p class="text-sm font-bold text-white hover:text-solarYellow transition"><a href="mailto:info@ayushenterprises.com">info@ayushenterprises.com</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="text-solarYellow text-lg mt-1"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <p class="text-xs text-slate-400 uppercase font-semibold">Our Office</p>
+                                    <p class="text-sm font-medium text-slate-200">Main Market Road, Near Power Grid, Lucknow, UP</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-10">
+                        <p class="text-xs text-slate-400 mb-2">Connect With Us</p>
+                        <div class="flex gap-4">
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-solarYellow hover:text-solarDark text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-solarYellow hover:text-solarDark text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-solarYellow hover:text-solarDark text-white flex items-center justify-center transition"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Column (Right) -->
+                <div class="lg:col-span-7 p-8 lg:p-12">
+                    <form id="contactForm" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs uppercase font-bold text-slate-500 mb-2">Full Name</label>
+                                <input type="text" id="name" placeholder="Aapka Name" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-solarGreen text-sm">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase font-bold text-slate-500 mb-2">Phone Number</label>
+                                <input type="tel" id="phone" placeholder="Aapka Mobile No." required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-solarGreen text-sm">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase font-bold text-slate-500 mb-2">Requirement Type</label>
+                            <select id="reqType" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-solarGreen text-sm bg-white">
+                                <option value="Residential Solar">Residential Solar (Ghar ke liye)</option>
+                                <option value="Commercial Solar">Commercial Solar (Business/Factory)</option>
+                                <option value="Solar Pump">Solar Pump (Kheti ke liye)</option>
+                                <option value="Service/Maintenance">Service / Maintenance</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase font-bold text-slate-500 mb-2">Message (Zaroorat ki details)</label>
+                            <textarea id="message" rows="4" placeholder="Kitne Kilowatt (kW) system ki zaroorat hai ya apna monthly bill likhein..." class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-solarGreen text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-solarGreen hover:bg-emerald-600 text-white font-bold py-4 rounded-lg shadow-md transition duration-200 uppercase tracking-wider text-sm">
+                            Free Quotation Request Bhejein
+                        </button>
+                    </form>
+                    <div id="formSuccess" class="hidden mt-6 bg-emerald-50 text-solarGreen border border-emerald-100 p-4 rounded-xl text-center">
+                        <p class="font-bold"><i class="fa-solid fa-circle-check mr-2"></i>Dhanyawaad! Aapki details safalta-purvak receive ho gayi hain.</p>
+                        <p class="text-xs text-slate-600 mt-1">Hamari expert team jald hi aapse sampark karegi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-solarDark text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-8 border-b border-slate-800 text-slate-300">
+                <div>
+                    <h4 class="text-xl font-bold text-white mb-4">Ayush Enterprises</h4>
+                    <p class="text-sm leading-relaxed text-slate-400">Green energy and sustainable solar power systems development with top industry standards.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#home" class="hover:text-solarYellow">Home</a></li>
+                        <li><a href="#why-choose-us" class="hover:text-solarYellow">Why Choose Us</a></li>
+                        <li><a href="#services" class="hover:text-solarYellow">Our Services</a></li>
+                        <li><a href="#calculator" class="hover:text-solarYellow">Solar Calculator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">Terms & Policies</h4>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white">Subsidy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Ayush Enterprises. All Rights Reserved.</p>
+                <p>Designed with <i class="fa-solid fa-heart text-red-500"></i> for Clean Energy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JS Scripts -->
+    <script>
+        // Mobile Menu Trigger
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Solar Interactive Calculator Logic
+        const billRange = document.getElementById('billRange');
+        const billVal = document.getElementById('billVal');
+        const recCapacity = document.getElementById('recCapacity');
+        const estCost = document.getElementById('estCost');
+        const estSavings = document.getElementById('estSavings');
+
+        billRange.addEventListener('input', function() {
+            const bill = parseInt(this.value);
+            billVal.textContent = bill.toLocaleString('en-IN');
+            
+            // Basic approximation: 
+            // 1kW average generation saves ~₹1200-1500 monthly.
+            // Let's assume bill/1400 = exact kW needed.
+            let kw = Math.round((bill / 1400) * 10) / 10;
+            if (kw < 1) kw = 1;
+            
+            recCapacity.textContent = kw.toFixed(1);
+            
+            // Estimated price 50,000 to 60,000 per kW roughly
+            let minPrice = Math.round(kw * 50000);
+            let maxPrice = Math.round(kw * 60000);
+            estCost.textContent = `₹${minPrice.toLocaleString('en-IN')} - ₹${maxPrice.toLocaleString('en-IN')}`;
+            
+            // Savings estimate (saving about 85% of existing electricity bill)
+            let savings = Math.round(bill * 0.85);
+            estSavings.textContent = `₹${savings.toLocaleString('en-IN')}`;
+        });
+
+        // Contact Form Submission Handling
+        const contactForm = document.getElementById('contactForm');
+        const successBox = document.getElementById('formSuccess');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Perform basic visual validation and action mimicking backend API call
+            contactForm.classList.add('hidden');
+            successBox.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
